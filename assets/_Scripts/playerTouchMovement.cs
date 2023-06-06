@@ -7,7 +7,7 @@ using ETouch = UnityEngine.InputSystem.EnhancedTouch; // use alias cuz of the 't
 
 public class playerTouchMovement : MonoBehaviour
 {
-    public CharacterData data;
+    
     // note for later: probably want to add to floating joystick class for later
     [SerializeField]
     private Vector2 JoystickSize = new Vector2(300, 300);
@@ -135,9 +135,13 @@ public class playerTouchMovement : MonoBehaviour
             0,
             MovementAmount.y);
 
-        
-        //Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
 
-        Player.MovePosition(Player.position + MovementAmount * data.speed * Time.deltaTime); //rigidbody 2d movement ? 
+        //Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
+        //Debug.Log(MovementAmount.ToString());
+        //Player.MovePosition(Player.position + MovementAmount * data.speed * Time.deltaTime); //rigidbody 2d movement ?
+        CharacterData data = GetComponent<CharacterControl>().data;
+        
+        Player.velocity = MovementAmount * data.speed;
+        //Debug.Log(Player.velocity);
     }
 }

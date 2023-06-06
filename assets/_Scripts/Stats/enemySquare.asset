@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b734782121b7fc47b21d2fea82a5906, type: 3}
   m_Name: enemySquare
   m_EditorClassIdentifier: 
-  characterName: 
+  characterName: Enemy 1
   description: 
-  characterModel: {fileID: 0}
+  characterModel: {fileID: 37562179731543621, guid: 7d26b5def7dde704eb5fd5e3d90e6ead, type: 3}
   health: 20
   speed: 2
   detectRange: 10

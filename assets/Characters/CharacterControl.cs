@@ -40,6 +40,12 @@ public class CharacterControl : MonoBehaviour
     {
         // default dying
         // override with other classes derived from this
+        if(gameObject.tag == "Enemy")
+        {
+            enemyManager.enemies.Remove(gameObject);
+
+        }
+        Destroy(gameObject);
         Debug.Log(data.name + "died"); 
     }
     // Update is called once per frame
