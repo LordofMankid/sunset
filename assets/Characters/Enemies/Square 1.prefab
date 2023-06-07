@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 2
   firePoint: {fileID: 37562179731543626}
-  projectile: {fileID: 3966292724909454827, guid: b19ddbdebd2b77444bcf4fe238369bf9, type: 3}
+  projectile: {fileID: 2916382146796087187, guid: 608644873c9f8dd4a9ef8b110b4aeeea, type: 3}
 --- !u!114 &37562177844480292
 MonoBehaviour:
   m_ObjectHideFlags: 0

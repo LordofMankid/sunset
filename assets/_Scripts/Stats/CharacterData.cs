@@ -13,7 +13,7 @@ public class CharacterData : ScriptableObject
     public int health = 20;
     public float speed = 2f; // tie this into the movement speed somehow
     public float detectRange = 10;
-    public float damage = 1;
+    public int damage = 1;
 
 
 }

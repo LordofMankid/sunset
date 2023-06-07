@@ -19,7 +19,7 @@ public class playerTouchMovement : MonoBehaviour
     [Range(0, 100)] private float MaxSpeed = 2.75f;
 
     private Finger MovementFinger; // finger used as reference through all touch functions
-    private Vector2 MovementAmount;
+    public Vector2 MovementAmount { get; set; }
 
     private void OnEnable()
     {
@@ -44,8 +44,8 @@ public class playerTouchMovement : MonoBehaviour
     {
         if(MovementFinger == null) // check if another finger isn't something, can add screen position limits for UI positions, etc 
         {
+
             MovementFinger = touchedFinger; // puts input finger into "reference" finger
-           
             MovementAmount = Vector2.zero;
             Joystick.gameObject.SetActive(true);
             
@@ -61,6 +61,7 @@ public class playerTouchMovement : MonoBehaviour
     {
         if (StartPosition.x < JoystickSize.x / 2)
         {
+            
             StartPosition.x = JoystickSize.x / 2;
         }
 
@@ -114,8 +115,6 @@ public class playerTouchMovement : MonoBehaviour
 
     }
 
-
-
     private void Touch_onFingerUp(Finger LostFinger)
     {
         if(LostFinger == MovementFinger)
@@ -136,7 +135,7 @@ public class playerTouchMovement : MonoBehaviour
             MovementAmount.y);
 
 
-        //Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
+        //Player.transform.LookAt(Player.transform.position + scaledMovement, new Vector3(0,0,1)); // stg this is a memory leak but ig it handles it??
         //Debug.Log(MovementAmount.ToString());
         //Player.MovePosition(Player.position + MovementAmount * data.speed * Time.deltaTime); //rigidbody 2d movement ?
         CharacterData data = GetComponent<CharacterControl>().data;

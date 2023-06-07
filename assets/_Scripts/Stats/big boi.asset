@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b734782121b7fc47b21d2fea82a5906, type: 3}
-  m_Name: enemySquare
+  m_Name: big boi
   m_EditorClassIdentifier: 
-  characterName: Enemy 1
+  characterName: 
   description: 
-  characterModel: {fileID: 37562179731543621, guid: 7d26b5def7dde704eb5fd5e3d90e6ead, type: 3}
-  health: 20
+  characterModel: {fileID: 0}
+  health: 200
   speed: 2
   detectRange: 10
-  damage: 2
+  damage: 1

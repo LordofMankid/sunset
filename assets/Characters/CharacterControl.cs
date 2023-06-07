@@ -9,7 +9,7 @@ public class CharacterControl : MonoBehaviour
 {
 
     public CharacterData data; // scriptable object, stores all data set somewhere else
-    public int currentHealth { get; private set; } // allows other objects to get, but only this object to modify current health
+    public int currentHealth { get; protected set; } // allows other objects to get, but only this object to modify current health
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class CharacterControl : MonoBehaviour
         currentHealth = data.health; // set current health 
     }
 
-    public void TakeDamage (int damage)
+    public virtual void TakeDamage (int damage)
     {
         currentHealth -= damage;
         Debug.Log(data.name + " takes " + damage + " damage.");
